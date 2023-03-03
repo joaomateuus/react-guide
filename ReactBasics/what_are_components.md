@@ -9,6 +9,7 @@
     * Don't do too many things in one and the same place (function)
 <br>
 <br>
+
 ## How is a component build ?
 ### React is a framework for build web user interfaces, and to create web frontend we just need:
 * ### HTML
