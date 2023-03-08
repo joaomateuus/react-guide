@@ -26,4 +26,30 @@ function Greeting(props) {
         </div> 
     )
 `````
-### To pass props we have to name the props assign to a value and in the child component we consume the props setting it as parameters
+### To pass props we have to create something that looks like a html atribute and assign a value that you`ll get there in your component. What react makes is take the whole props that you passed for a component and pass it as a parameter that is an object and you can get the props you passed on your components as an argument.
+````
+function Home() {
+    const activeStudents = [
+        {name: 'joao', age: 21}
+        {name: 'mateus', age: 21}
+    ]
+    
+    return(
+        <div>
+            <Cards students={activeStudents} />
+        </div>
+   )
+}
+````
+````
+function Cards(props) {
+    return (
+        <div>
+            {   
+                props.students.map(student => {
+                    return student
+                });
+            };
+        </div> 
+    )
+````
