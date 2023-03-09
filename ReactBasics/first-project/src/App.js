@@ -9,10 +9,9 @@ function App() {
     {id: 1, title: 'Dinner', amount:30.00, date: '06-03-2023'},
   ]
   return (
-    <div className="App">
-      <div className='main-div'>
+    <div>
+        <h1>Let´s get started</h1>
         <Expenses expenses={mockedData} />
-      </div>
     </div>
   );
 }
