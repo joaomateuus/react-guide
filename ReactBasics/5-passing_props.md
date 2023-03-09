@@ -53,3 +53,42 @@ function Cards(props) {
         </div> 
     )
 ````
+<br>
+
+## Other example:
+* Where is rendered:
+````
+import React, { Component } from 'react';
+import './App.css';
+import Person from './Person/Person';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Hi, I'm a React App!</h1>
+        <Person name="Max" age="29" />
+        <Person name="Jerôme" age="26" />
+        <Person name="Morgane" age="27" />
+      </div>
+    );
+  }
+}
+
+export default App;
+````
+* Component:
+````
+// src/Person/Person.js
+import React from 'react';
+
+const person = (props) => {
+  return (
+    <p>
+      I'm a {props.name} and I'm {props.age} years old!
+    </p>
+  );
+};
+
+export default person;
+````
