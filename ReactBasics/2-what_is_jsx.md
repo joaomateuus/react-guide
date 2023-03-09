@@ -26,7 +26,10 @@ class App extends Component {
 <br>
 
 
-## Exemplos de implementacao do jsx: 
+### JSX is NOT HTML but it looks a lot like it. Differences can be seen when looking closely though (for example className in JSX vs class in "normal HTML"). JSX is just syntactic sugar for JavaScript, allowing you to write HTMLish code instead of nested React.createElement(...) calls.
+<br>
+
+## JSX implementation example: 
 ````
 const name = "joao"
 const headingOne = <h1>Hello, {name}</h1>
@@ -52,5 +55,5 @@ export default person;
 <br>
 
 ## JSX Restrictions
-### For example, class can't be used in JSX, because JSX is JS and class is a reserved word. Also we can't return more than one root element (solution using Fragment <></>).
+### For example, html classes can't be used in JSX, because JSX is JS and class is a reserved word. Also we can't return more than one root element (solution using Fragment <></>).
 
