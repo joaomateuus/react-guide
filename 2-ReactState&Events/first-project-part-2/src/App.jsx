@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import './App.css';
 import { Expenses } from './components/Expenses/Expenses';
+import { NewExpense } from './components/NewExpense/NewExpense';
 
 function App() {
   const mockedData = [
@@ -12,7 +12,7 @@ function App() {
 
   return (
    <div>
-      <h1>Lets get Started</h1>
+      <NewExpense />
       <Expenses expenses={mockedData} />
    </div>
   )
