@@ -61,4 +61,9 @@
     }
     ````
     * ### And we can update the state using the second variablem and its not only the value that is changed but the component is re-rendered in a reactive way.
+<br>
+
+
+## When do I need to use useState ?
+* ## When you need to update a value on the screen, because how we saw reassign a value to a variable with regular javascript it wont work, react has this hook that we can manage state easly in a reactive way. 
 
