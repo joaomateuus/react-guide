@@ -3,7 +3,7 @@
 <br>
 
 ## How does it works ?
-### We can replicate the event listener pattern, as we saw we set an onChange that will be listening the user input. Looking in this way we can set a prop to parent from child that point to a function that we deal with the value in the parent.
+### We can replicate the event listener pattern, as we set an onChange that will be listening the user input. Looking in this way we can set a prop to parent from child that point to a function that we deal with the value in the parent.
 ### And in the child you receive this function as props and call it passing the value as a parameter, when the function its executed in the child it will triger in the parent and you can manipulate the value that you received as an argument
 
 * ### Parent

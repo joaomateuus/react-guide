@@ -10,11 +10,23 @@ export const Expenses = ({expenses}) => {
   const handleFilterValue = (selectedYear) => {
     setFilter(selectedYear);
   };
+
+  const filteredByYear = expenses.filter(expense => {
+    return expense.date.slice(6) === filter;
+  });
   return (
     <>
       <Card className='expenses'>
         <ExpensesFilter selected={filter} expenseFilterListener={handleFilterValue} />
         {
+          filter
+          ?
+            filteredByYear.map(expense => {
+              return(
+                <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />
+              )
+            })
+          :
           expenses.map(expense => {
             return (
               <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />
