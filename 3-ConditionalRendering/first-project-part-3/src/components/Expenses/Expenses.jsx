@@ -14,6 +14,7 @@ export const Expenses = ({expenses}) => {
   const filteredByYear = expenses.filter(expense => {
     return expense.date.slice(6) === filter;
   });
+
   return (
     <>
       <Card className='expenses'>
@@ -23,13 +24,13 @@ export const Expenses = ({expenses}) => {
           ?
             filteredByYear.map(expense => {
               return(
-                <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />
+                <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} key={expense.id} />
               )
             })
           :
           expenses.map(expense => {
             return (
-              <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />
+              <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}  key={expense.id}/>
             )
           })
         }
