@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css'
 
-export const ExpenseForm = () => {
+export const ExpenseForm = ({newExpenseListener}) => {
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
@@ -20,12 +20,13 @@ export const ExpenseForm = () => {
         event.preventDefault();
 
         const expenseData = {
+            id: Math.random().toString(),
             title: title,
             amount: amount,
             date: date
         };
-
-        console.log(expenseData);
+        //passing to parent
+        newExpenseListener(expenseData);
         setTitle('');
         setAmount('');
         setDate('');
@@ -44,7 +45,7 @@ export const ExpenseForm = () => {
                 </div>
                 <div className="new-expense__control">
                     <label>Date</label>
-                    <input type="date" min="2019-01-01" value={date} max="2022-12-31" onChange={dateChangeHandler}/>
+                    <input type="date" min="2019-01-01" value={date} max="2022- 12-31" onChange={dateChangeHandler}/>
                 </div>
             </div>
             <button className="new_expense__actions" type="submit">Add Expense</button>
